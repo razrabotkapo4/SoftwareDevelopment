@@ -20,8 +20,8 @@ public class HotelBookingSystem {
 
         String[] testBookingDatesRange = testBookingInput.split("-");
         LocalDate startTestBookingDatesRange = LocalDate.parse(testBookingDatesRange[0], dateTimeFormatter);
-        LocalDate endTestBookingDatesRange   = testBookingDatesRange.length == 1 ? startTestBookingDatesRange :
-                                               LocalDate.parse(testBookingDatesRange[1], dateTimeFormatter);
+        LocalDate endTestBookingDatesRange   = testBookingDatesRange.length == 1 ? startTestBookingDatesRange
+                                               : LocalDate.parse(testBookingDatesRange[1], dateTimeFormatter);
 
         for (String bookingDates : bookingDatesList) {
             if (bookingDates.contains("-")) {
@@ -32,8 +32,8 @@ public class HotelBookingSystem {
                 for (LocalDate testBookingDate = startTestBookingDatesRange;
                      testBookingDate.isBefore(endTestBookingDatesRange.plusDays(1));
                      testBookingDate = testBookingDate.plusDays(1)) {
-                    if (testBookingDate.isAfter(startBookingDatesRange) &&
-                        testBookingDate.isBefore(endBookingDatesRange)) {
+                    if (testBookingDate.isAfter(startBookingDatesRange)
+                        && testBookingDate.isBefore(endBookingDatesRange)) {
                         System.out.print(false);
 
                         return;

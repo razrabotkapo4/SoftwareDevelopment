@@ -2,7 +2,12 @@ package ru.mai.softwaredevelopment.homework.march26;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
 public class MuseumVisitors {
     public static void main(String[] args) {
@@ -10,10 +15,10 @@ public class MuseumVisitors {
 
         Scanner scanner = new Scanner(System.in);
 //      2
-        final int N = Integer.parseInt(scanner.nextLine());
+        final int n = Integer.parseInt(scanner.nextLine());
         List<List<Object>> visitors = new ArrayList<>();
 
-        for (int i = 0; i < N; ++i) {
+        for (int i = 0; i < n; ++i) {
 //          9:00 12:00
 //          9:30 10:00
             String input = scanner.nextLine();
