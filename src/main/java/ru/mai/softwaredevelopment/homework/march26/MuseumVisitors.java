@@ -42,16 +42,21 @@ public class MuseumVisitors {
 
         visitors.sort(Comparator.comparing(timings -> (Date) timings.get(0)));
 
+        int maxVisitors   = 0;
+        int countVisitors = 0;
         Date startTimings = null;
         Date endTimings   = null;
 
-        for (List<Object> visitor : visitors) {
-            if (visitor.get(1).equals("start")) {
-                startTimings = (Date) visitor.get(0);
+        for (int i = 0; i < visitors.size(); ++i) {
+            if (visitors.get(i).get(1).equals("start")) {
+                ++countVisitors;
             } else {
-                endTimings   = (Date) visitor.get(0);
-
-                break;
+                if (countVisitors > maxVisitors) {
+                    maxVisitors   = countVisitors;
+                    countVisitors = 0;
+                    startTimings  = (Date) visitors.get(i - 1).get(0);
+                    endTimings    = (Date) visitors.get(i).get(0);
+                }
             }
         }
 
