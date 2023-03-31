@@ -55,6 +55,6 @@ public class MuseumVisitors {
             }
         }
 
-        System.out.print(simpleDateFormat.format(startTimings) + " - " + simpleDateFormat.format(endTimings));
+        System.out.print(simpleDateFormat.format(startTimings) + " " + simpleDateFormat.format(endTimings));
     }
 }

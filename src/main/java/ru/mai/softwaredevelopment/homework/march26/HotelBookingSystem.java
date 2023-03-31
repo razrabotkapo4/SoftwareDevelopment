@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class HotelBookingSystem {
     public static void main(String[] args) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.M.yyyy");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
         Scanner scanner = new Scanner(System.in);
 //      ["12.09.2020", "14.09.2020-02.10.2020"]
@@ -15,7 +15,7 @@ public class HotelBookingSystem {
         String testBookingInput = scanner.nextLine();
         scanner.close();
 
-        bookingInput = bookingInput.replaceAll("[\\[\\]\" '`;]", "");
+        bookingInput = bookingInput.replaceAll("[\\[\\]\"'`;]", "");
         String[] bookingDatesList = bookingInput.split(", ");
 
         String[] testBookingDatesRange = testBookingInput.split("-");

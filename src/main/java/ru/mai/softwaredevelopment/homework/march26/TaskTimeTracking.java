@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class TaskTimeTracking {
     public static void main(String[] args) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.M.yyyy HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
 
         final int millisPerSecond = 1000;
         final int secondsPerMinute = 60;

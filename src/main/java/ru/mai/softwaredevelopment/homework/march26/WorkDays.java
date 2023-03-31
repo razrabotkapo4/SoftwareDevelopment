@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class WorkDays {
     public static void main(String[] args) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd.M.yyyy");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("d.M.yyyy");
 
         final int rest = 4;
 
